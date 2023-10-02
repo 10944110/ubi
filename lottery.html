@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽獎專區</title>
+    <style>
+        @import url(css/lottery.css);
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="image/Logo.PNG" class="logo"></div>
+        <div class="slogan"><h2>好險U你</h2></div>
+        <button class="login-button"><a href="index.html">登出</a></button>
+    </header>
+    <div class="back-line">
+        <div class="container">
+            <!-- 按鈕開始-->
+            <div class="buttontwice">        
+                <div class="buttontwice-1"><button class="button button1" id="button button1"                
+                    onclick="window.location.href='member.html'"><img src="image/mem1.PNG" class="icon">                
+                    <p class="buttonfont">&nbsp;會員資料</p></button>       
+                </div>      
+                <div class="buttontwice-2"><button class="button button2" id="button button2"               
+                    onclick="window.location.href='myinsurance.html'"><img src="image/mem2.PNG" class="icon">               
+                    <p class="buttonfont">&nbsp;我的保單</p></button>       
+                </div>
+        
+                <div class="buttontwice-3"><button class="cbutton button3" id="button button3"               
+                    onclick="window.location.href='payment.html'"><img src="image/mem3.PNG" class="icon">                
+                    <p class="buttonfont">&nbsp;保費計算</p></button>        
+                </div>        
+                <div class="buttontwice-4"><button class="button button4" id="button button4"            
+                    onclick="window.location.href='lottery.html'"><img src="image/mem4.PNG" class="icon">               
+                    <p class="buttonfont">&nbsp;抽獎專區</p></button>        
+                </div>
+            </div>    
+            <div class="fixed-button"><p>線上<br>客服</p></div>
+            <!-- 按鈕結束-->
+
+            <!-- 抽獎內容開始-->
+            <form class="all">
+                <div class="overlay" id="overlay"></div>
+                <div class="lottery">
+                    <div class="title">
+                        <p class="times">還有&nbsp;&nbsp;10&nbsp;&nbsp;次 抽獎次數</p>
+                    </div>
+                    <div class="content1" style="float:left;">
+                        <div class="name">
+                            <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                        </div>
+                        <div class="box">
+                            <div class="leftbox" style="float:left;">
+                                <img src="image/sur1.PNG" class="photo"><br>
+                                <p class="text1">已登記&nbsp;0&nbsp;次</p>
+                            </div>
+                            <div class="rightbox" style="float:right;">
+                                <div class="word">
+                                    <p class="text2">已有</p>
+                                    <h2 class="text3">&nbsp;&nbsp;264次</h2>
+                                    <p class="text4">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;登記</p>
+                                    <button class="go" type="button" onclick="showPopup(2)">抽!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content2" style="float:right;">
+                        <div class="name">
+                            <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                        </div>
+                        <div class="box">
+                            <div class="leftbox" style="float:left;">
+                                <img src="image/sur1.PNG" class="photo"><br>
+                                <p class="text1">已登記&nbsp;0&nbsp;次</p>
+                            </div>
+                            <div class="rightbox" style="float:right;">
+                                <div class="word">
+                                    <p class="text2">已有</p>
+                                    <h2 class="text3">&nbsp;&nbsp;264次</h2>
+                                    <p class="text4">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;登記</p>
+                                    <button class="go" type="button" onclick="showPopup(3)">抽!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content3" style="float:left;">
+                        <div class="name">
+                            <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                        </div>
+                        <div class="box">
+                            <div class="leftbox" style="float:left;">
+                                <img src="image/sur1.PNG" class="photo"><br>
+                                <p class="text1">已登記&nbsp;0&nbsp;次</p>
+                            </div>
+                            <div class="rightbox" style="float:right;">
+                                <div class="word">
+                                    <p class="text2">已有</p>
+                                    <h2 class="text3">&nbsp;&nbsp;264次</h2>
+                                    <p class="text4">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;登記</p>
+                                    <button class="go" type="button" onclick="showPopup(4)">抽!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content4" style="float:right;">
+                        <div class="name">
+                            <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                        </div>
+                        <div class="box">
+                            <div class="leftbox" style="float:left;">
+                                <img src="image/sur1.PNG" class="photo"><br>
+                                <p class="text1">已登記&nbsp;0&nbsp;次</p>
+                            </div>
+                            <div class="rightbox" style="float:right;">
+                                <div class="word">
+                                    <p class="text2">已有</p>
+                                    <h2 class="text3">&nbsp;&nbsp;264次</h2>
+                                    <p class="text4">&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;登記</p>
+                                    <button class="go" type="button" onclick="showPopup(5)">抽!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="under">
+                    <!-- 當按下按鈕時，呼叫 showPopup 函數 -->
+                    <button class="under1" style="float:left;" type="button" onclick="showPopup(1)"
+                        data-popup="1">上期開獎名單</button>
+                    <button class="under2" style="float:right;">抽獎規則查詢</button>
+                </div>
+                <script>
+                    // 函數用於顯示彈跳視窗
+                    function showPopup(num) {
+                        // 獲取彈跳視窗元素
+                        var popup = document.querySelector('.popup' + num);
+                        var overlay = document.getElementById('overlay');
+        
+                        // 顯示彈跳視窗
+                        popup.style.display = 'block';
+                        overlay.style.display = 'block';
+                    }
+        
+                    // 函數用於關閉彈跳視窗
+                    function closePopup(num) {
+                        // 獲取彈跳視窗元素
+                        var popup = document.querySelector('.popup' + num);
+                        var overlay = document.getElementById('overlay');
+        
+                        // 隱藏彈跳視窗
+                        popup.style.display = 'none';
+                        overlay.style.display = 'none';
+                    }
+                    const buttons = document.querySelectorAll('[data-popup]');
+                    buttons.forEach((button) => {
+                        button.addEventListener('click', (e) => {
+                            const popupNum = e.target.getAttribute('data-popup');
+                            showPopup(popupNum);
+                        });
+                    });
+                </script>
+                <div class="popup popup1">
+                    <p>2022第二期（6~12月）&emsp;&emsp;中獎名單</p>
+                    <!-- 垂直的長方形 -->
+                    <div class="rectangle">
+                        <p class="rec">【AISTAR】75吋 4K HDR液晶顯示器</p>
+                        <div class="solidline"></div>
+                        <h2 class="rec2">陳O鉉&emsp;09__991</h2>
+                    </div>
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                    <div class="rectangle"></div>
+                    <!-- 關閉按鈕 -->
+                    <h3><br><br></h3>
+                    <button class="close-button" type="button" onclick="closePopup(1)">關閉</button>
+                </div>
+        
+                <div class="popup popup2">
+                    <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                    <div class="rectangle">
+                        <h2>電視的圖</h2>
+                    </div>
+                    <div class="many">
+                        <button class="previousround" type="button" onclick="decrementCount(1)">&#8249;</button>
+                        <div class="count-display">
+                            <span id="count1">0</span> 次
+                        </div>
+                        <button class="nextround" type="button" onclick="incrementCount(1)">&#8250;</button>
+                    </div>
+                    <h3><br><br><br></h3>
+        
+                    <div class="many">
+                        <button class="close-button" type="button" onclick="closePopup(2)">取消</button>
+                        <button class="close-button1" type="submit" onclick="closePopup(2)">確認</button>
+                    </div>
+                </div>
+        
+                <div class="popup popup3">
+                    <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                    <div class="rectangle">
+                        <h2>電視的圖</h2>
+                    </div>
+                    <div class="many">
+                        <button class="previousround" type="button" onclick="decrementCount(2)">&#8249;</button>
+                        <div class="count-display">
+                            <span id="count2">0</span> 次
+                        </div>
+                        <button class="nextround" type="button" onclick="incrementCount(2)">&#8250;</button>
+                    </div>
+                    <h3><br><br><br></h3>
+        
+                    <div class="many">
+                        <button class="close-button" type="button" onclick="closePopup(3)">取消</button>
+                        <button class="close-button1" type="submit" onclick="closePopup(3)">確認</button>
+                    </div>
+                </div>
+        
+                <div class="popup popup4">
+                    <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                    <div class="rectangle">
+                        <h2>電視的圖</h2>
+                    </div>
+                    <div class="many">
+                        <button class="previousround" type="button" onclick="decrementCount(3)">&#8249;</button>
+                        <div class="count-display">
+                            <span id="count3">0</span> 次
+                        </div>
+                        <button class="nextround" type="button" onclick="incrementCount(3)">&#8250;</button>
+                    </div>
+                    <h3><br><br><br></h3>
+        
+                    <div class="many">
+                        <button class="close-button" type="button" onclick="closePopup(4)">取消</button>
+                        <button class="close-button1" type="submit" onclick="closePopup(4)">確認</button>
+                    </div>
+                </div>
+        
+                <div class="popup popup5">
+                    <p>【AISTAR】75吋 4K HDR液晶顯示器</p>
+                    <div class="rectangle">
+                        <h2>電視的圖</h2>
+                    </div>
+                    <div class="many">
+                        <button class="previousround" type="button" onclick="decrementCount(4)">&#8249;</button>
+                        <div class="count-display">
+                            <span id="count4">0</span> 次
+                        </div>
+                        <button class="nextround" type="button" onclick="incrementCount(4)">&#8250;</button>
+                    </div>
+                    <h3><br><br><br></h3>
+        
+                    <div class="many">
+                        <button class="close-button" type="button" onclick="closePopup(5)">取消</button>
+                        <button class="close-button1" type="submit" onclick="closePopup(5)">確認</button>
+                    </div>
+                </div>
+                <script>
+                    let count1 = 0;
+                    let count2 = 0;
+                    let count3 = 0;
+                    let count4 = 0;
+        
+                    const countDisplay1 = document.getElementById('count1');
+                    const countDisplay2 = document.getElementById('count2');
+                    const countDisplay3 = document.getElementById('count3');
+                    const countDisplay4 = document.getElementById('count4');
+        
+        
+                    // 函數用於增加計次，接受一個參數來標識計次器
+                    function incrementCount(counter) {
+                        // 根據傳入的 counter 參數來更新對應的計次器
+                        if (counter === 1) {
+                            count1++;
+                            updateCountDisplay(count1, countDisplay1);
+                        } else if (counter === 2) {
+                            count2++;
+                            updateCountDisplay(count2, countDisplay2);
+                        } else if (counter === 3) {
+                            count3++;
+                            updateCountDisplay(count3, countDisplay3);
+                        } else if (counter === 4) {
+                            count4++;
+                            updateCountDisplay(count4, countDisplay4);
+                        }
+                    }
+        
+                    // 函數用於減少計次，接受一個參數來標識計次器
+                    function decrementCount(counter) {
+                        // 根據傳入的 counter 參數來更新對應的計次器
+                        if (counter === 1 && count1 > 0) {
+                            count1--;
+                            updateCountDisplay(count1, countDisplay1);
+                        } else if (counter === 2 && count2 > 0) {
+                            count2--;
+                            updateCountDisplay(count2, countDisplay2);
+                        } else if (counter === 3 && count3 > 0) {
+                            count3--;
+                            updateCountDisplay(count3, countDisplay3);
+                        } else if (counter === 4 && count4 > 0) {
+                            count4--;
+                            updateCountDisplay(count4, countDisplay4);
+                        }
+                    }
+        
+                    // 更新
+                    function updateCountDisplay(count, displayElement) {
+                        displayElement.textContent = count;
+                    }
+                </script>
+            </form>
+            <!-- 抽獎內容結束-->
+        </div>
+    </div>
+</body>
+</html>

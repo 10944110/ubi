@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>我的保單</title>
+    <style type="text/css">
+        /* 添加一些基本的CSS樣式，根據需要進行調整 */
+        @import url(css/myinsurance.css);
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="image/Logo.PNG" class="logo"></div>
+        <div class="slogan"><h2>好險U你</h2></div>
+        <button class="login-button"><a href="index.html">登出</a></button>
+    </header>  
+    <div class="back-line">
+        <div class="container">
+            <!-- 按鈕開始-->
+            <div class="buttontwice">        
+                <div class="buttontwice-1"><button class="button button1" id="button button1"                
+                    onclick="window.location.href='member.html'"><img src="image/mem1.PNG" class="icon">                
+                    <p class="buttonfont">&nbsp;會員資料</p></button>       
+                </div>      
+                <div class="buttontwice-2"><button class="button button2" id="button button2"               
+                    onclick="window.location.href='myinsurance.html'"><img src="image/mem2.PNG" class="icon">               
+                    <p class="buttonfont">&nbsp;我的保單</p></button>       
+                </div>
+        
+                <div class="buttontwice-3"><button class="cbutton button3" id="button button3"               
+                    onclick="window.location.href='payment.html'"><img src="image/mem3.PNG" class="icon">                
+                    <p class="buttonfont">&nbsp;保費計算</p></button>        
+                </div>        
+                <div class="buttontwice-4"><button class="button button4" id="button button4"            
+                    onclick="window.location.href='lottery.html'"><img src="image/mem4.PNG" class="icon">               
+                    <p class="buttonfont">&nbsp;抽獎專區</p></button>        
+                </div>
+            </div>    
+            <div class="fixed-button"><p>線上<br>客服</p></div>
+            <!-- 按鈕結束-->
+            <!-- 選擇日期開始 -->
+            <div class="centered-container">
+                <div class="date-range-selection">
+                    <a href="#" id="last-month" class="time">近一個月</a>
+                    <a href="#" id="last-three-months" class="time">近三個月</a>
+                    <a href="#" id="last-year" class="time">近一年</a>
+                    <a href="#" id="custom" class="time">自訂日期</a>
+                </div>
+                <div class="input-container" id="custom-inputs">
+                    <input type="date" id="start" name="trip-start" value="2022-12-01" min="2022-12-01" max="2023-06-25" />
+                    <p class="line">----------------</p>
+                    <input type="date" id="end" name="trip-start" value="2023-06-25" min="2022-12-01" max="2023-06-25" />
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    // 默认情况下将自定义日期的背景颜色设为rgb(83, 113, 187)
+                    $("#custom").addClass("active");
+                    updateDateRangeBackground();
+            
+                    // 点击日期范围链接时更改背景颜色
+                    $("#last-month, #last-three-months, #last-year").click(function() {
+                        resetColors();
+                        $(this).addClass("active");
+                        hideCustomInputs(); // 隐藏自定义日期输入框
+                        updateDateRangeBackground();
+                    });
+            
+                    $("#custom").click(function() {
+                        resetColors();
+                        $(this).addClass("active");
+                        showCustomInputs(); // 显示自定义日期输入框
+                        updateDateRangeBackground();
+                    });
+            
+                    function resetColors() {
+                        // 移除所有链接的active类，重置背景颜色
+                        $("a").removeClass("active");
+                    }
+            
+                    function updateDateRangeBackground() {
+                        // 设置选取日期范围的背景颜色
+                        var selectedDateRange = $(".active").attr("id");
+                        if (selectedDateRange === "custom") {
+                            // 在这里添加自定义日期范围的逻辑
+                            // 示例：如果选择了自定义，则将日期输入框的背景颜色设为rgb(83, 113, 187)
+                            $("#start, #end").css("background-color", "white");
+                        } else {
+                            // 清除日期输入框的背景颜色
+                            $("#start, #end").css("background-color", "transparent");
+                        }
+                    }
+            
+                    function hideCustomInputs() {
+                        $("#custom-inputs").hide(); // 隐藏自定义日期输入框
+                    }
+            
+                    function showCustomInputs() {
+                        $("#custom-inputs").show(); // 显示自定义日期输入框
+                    }
+                });
+            </script>
+             <!-- 選擇日期結束 -->
+
+            <!-- 我的保單開始 -->
+            <div class="myinsurance">
+                <div class="previous">  
+                    <a href="pastinsurance.html" class="previousround">&#8249;</a>        
+                </div>
+                <div>
+                    <form>
+                        <div class="content">
+                            <div class="title"><h1>&nbsp;⚫️有效 - 持續繳費中</h1></div>
+                            <div class="contentsize">
+                                <div class="row">
+                                    <div class="box">
+                                        <img src="image/sur1.PNG" class="person">
+                                        <div class="box-text">                            
+                                            <p>要保人</p>                            
+                                            <p1>李小安</p1>                           
+                                        </div>                        
+                                    </div>
+                                    <div class="box">                           
+                                        <img src="image/sur2.PNG" class="person">                            
+                                        <div class="box-text">                            
+                                            <p>被保人</p>                            
+                                            <p1>李小安</p1>                            
+                                        </div>
+                                    </div>                   
+                                </div>                    
+                                <div class="row2">
+                                    <div class="column">                           
+                                        <h2>保單號：112657332<br></h2>                           
+                                        <h2>牌照號碼：9H2048<br></h2>                         
+                                        <h2>承載限制：5人<br></h2>                         
+                                        <h2>發照年月：10610<br></h2>                     
+                                        <h2>排氣量：2000C.C</h2>                  
+                                    </div>
+                                    <div class="column">
+                                        <h2><br></h2>                           
+                                        <h2>車型：本田<br></h2>                           
+                                        <h2>車種：自用小客車<br></h2>                          
+                                        <h2>出廠年月：10803</h2>                 
+                                    </div>    
+                                </div>
+                    <h2 class="sur">保險期間：<br>自民國103年12月22日中午12時至民國104年12月20日止中午12時</h2>
+                    <h2 class="sur">幣別：新台幣元</h2>
+                    
+                    <h2 class="sur">基本保險費：30,000</h2>
+                    <h2 class="sur">行駛地區：以中華民國境內為限</h2>
+                    <h2 class="sur">經手人：曾小慈</h2>
+                    <h3><br></h3>
+                </div></div>
+            </form>
+        </div>
+        <div class="next">
+            <a href="#" class="nextround">&#8250;</a>
+        </div>
+    </div>
+    <!-- 我的保單結束 -->
+             
+        </div>
+    </div>   
+    
+</body>
+</html>

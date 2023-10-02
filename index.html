@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <style type="text/css">
+        /* 添加一些基本的CSS樣式，根據需要進行調整 */
+        @import url(css/index.css);
+        
+        .cc::before {
+    content: url('image/Index7.PNG'); 
+    position: absolute;
+    top: -39px; 
+    left: 61px;
+    max-width: 10%;
+} 
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="image/Logo.PNG" class="logo"></div>
+        <div class="slogan"><h2>好險U你</h2></div>
+        <button class="login-button"><a href="login.html" class="log">登入/註冊</a></button>
+    </header>
+    <div class="ad">
+        <img src="image/ad1.PNG" style="width: 62%;">
+        <img src="image/ad2.PNG" style="width: 70%;">
+    </div>
+    <!-- 其他內容放在這裡 -->
+    <div class="buttontwice">
+        <div class="buttontwice-1"><button class="button button1" id="button button1"
+                onclick="window.location.href='#first'"><img src="image/Index1.PNG" class="icon">
+                <p class="buttonfont">&nbsp;保單特色</p></button>
+        </div>
+        <div class="buttontwice-2"><button class="button button2" id="button button2"
+                onclick="window.location.href='#second'"><img src="image/Index2.PNG" class="icon">
+                <p class="buttonfont">&nbsp;技術介紹</p></button>
+        </div>
+        <div class="buttontwice-3"><button class="cbutton button3" id="button button3"
+                onclick="window.location.href='#third'"><img src="image/Index3.PNG" class="icon">
+                <p class="buttonfont">&nbsp;常見問題</p></button>
+        </div>
+    </div>
+    
+    <div class="fixed-button" id="open-popup"><p>立刻<br>投保</p></div>
+    <div class="popup" id="myPopup">
+        <div class="popup-content">
+            <div class="contactus"><h2>聯絡我們</h2><br><hr></div><br>
+            <form>
+                <div class="form-left">
+                    <div class="input-group">
+                        <label for="name">姓名/暱稱</label>
+                        <input type="text" id="name" name="name">
+                    </div><br>
+    
+                    <div class="input-group">
+                        <label for="phone">電話號碼</label>
+                        <input type="text" id="phone" name="phone">
+                    </div><br>
+    
+                    <div class="input-group">
+                        <label for="email">電子郵件</label>
+                        <input type="text" id="email" name="email">
+                    </div><br>
+                </div>
+    
+                <div class="form-right">
+                    <label for="date" >可連絡時段</label><br>
+                    <input type="date" id="date" name="date" value="2023-09-28"><br>
+                    <select id="time" name="time" >
+                        <option value="8:00-10:00">8:00 - 10:00</option>
+                        <option value="10:00-12:00">10:00 - 12:00</option>
+                        <option value="12:00-14:00">12:00 - 14:00</option>
+                        <option value="12:00-14:00">14:00 - 16:00</option>
+                        <option value="12:00-14:00">16:00 - 18:00</option>
+                        <option value="12:00-14:00">18:00 - 20:00</option>
+                        <option value="12:00-14:00">20:00 - 22:00</option>
+                        <!-- 添加其他可選擇的時間段 -->
+                    </select><br><br>
+                </div>
+    
+                <div style="clear:both;"></div> <!-- 清除浮動元素 -->
+    
+                <button type="button" id="cancel-button">取消</button>
+                <button type="submit">送出</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+         // 當按鈕被點擊時顯示彈跳視窗並為背景添加陰影
+    document.getElementById("open-popup").addEventListener("click", function () {
+        document.getElementById("myPopup").style.display = "block";
+        document.body.style.boxShadow = "0 0 10px gary";
+    });
+
+    // 當取消按鈕被點擊時隱藏彈跳視窗並移除背景陰影
+    document.getElementById("cancel-button").addEventListener("click", function () {
+        document.getElementById("myPopup").style.display = "none";
+        document.body.style.boxShadow = "none";
+    });
+    </script>
+
+    <div class="container">
+        <!-- 保單特色開始 -->
+        <div class="yellow-row" id="first">
+            <div class="yellow-column">
+                <div class="yellow-column-container">
+                    <h2 style="text-align: left;color: blueviolet;">&nbsp;保費標準</h2>
+                    <h2 style="text-align: right;color: blueviolet;">&智能合約&nbsp;</h2>
+                    <div class="solidline1"></div>
+                    &nbsp;<li class="a">AI運算分析</li>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">動態保費標準</li>
+                    <span class="b">（根據行車數據動態調整）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">合約去紙化</li>
+                    <span class="b">（全線上流程，無紙更環保）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">智能合約</li>
+                    <span class="b">（區塊鍊加密，隱私更安心）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    <p><br></p>
+                    <img src="image/Index6.PNG" style="width: 170px;margin-top: 20%;">
+                </div>
+            </div>
+            <div class="yellow-column">
+                <div class="yellow-column-container">
+                    <h2 style="text-align: left;color: orange;">&nbsp;環境因子</h2>
+                    <h2 style="text-align: right;color: orange;">&動態因素&nbsp;</h2>
+                    <div class="solidline2"></div>
+                    &nbsp;<li class="a">環境因子</li>
+                    <span class="b">（每日更新當天行車風險等級）</span>
+                    
+                    <ul class="c">
+                        <li class="c1">光線</li>
+                        <li class="c1">風速</li>
+                        <li class="c1">雨量、濕度</li>
+                        <li class="c1">駕駛地點</li>
+                        <div class="cc"><li class="c1">交通密度</li></div>
+                        <li class="c1">特殊天氣</li>
+                    </ul>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">動態因素</li>
+                    <span class="b">（每日更新駕駛人的行車情況）</span>
+                    <ul class="c">
+                        <li class="c2">駕駛人狀態</li>
+                        <li class="c2">駕駛時長</li>
+                        <li class="c2">行車時段</li>
+                        <li class="c2">違規次數</li>
+                        <li class="c2">急煞車/加速</li>
+                    </ul>
+                    <p><br></p>
+                </div>
+            </div>
+            <div class="yellow-column">
+                <div class="yellow-column-container">
+                    <h2 style="text-align: left;color: blueviolet;">&nbsp;車輛狀況</h2>
+                    <h2 style="text-align: right;color: blueviolet;">&駕駛習慣&nbsp;</h2>
+                    <div class="solidline1"></div>
+                    &nbsp;<li class="a">車輛安全數值</li>
+                    <span class="b">（車齡、是否有按時保養、檢測）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">駕駛背景</li>
+                    <span class="b">（職業、駕駛經驗）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    &nbsp;<li class="a">駕駛習慣</li>
+                    <span class="b">（開車頻率、開車時段）</span>
+                    <p><br></p>
+                    <div class="dashedline"></div>
+                    <p><br></p>
+                    <img src="image/Index8.PNG" style="width: 200px;margin-top: 10%;">
+                </div>
+            </div>
+        </div>
+        <!-- 保單特色結束 -->
+
+        <!-- 技術介紹開始 -->
+        <div class="green-row" id="second">
+            <h1 class="g1">技術介紹</h1>
+            <div class="image-container">
+                <button id="up-button" class="arrow-button">&#9668;</button>
+                <img src="image/Index4.PNG" id="image" class="centered-image">
+                <button id="down-button" class="arrow-button">&#9658;</button>
+            </div>
+            <script>
+            const image = document.getElementById('image');
+            const upButton = document.getElementById('up-button');
+            const downButton = document.getElementById('down-button');
+            const images = [
+                'image/Index4.PNG',
+                'image/Index5.PNG' // 加圖
+                ];
+                let currentImageIndex = 0;
+                function showImage(index) {
+                    image.src = images[index];
+                    currentImageIndex = index;
+                }
+                upButton.addEventListener('click', () => {
+                    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                    showImage(currentImageIndex);
+                });
+                downButton.addEventListener('click', () => {
+                    currentImageIndex = (currentImageIndex + 1) % images.length;
+                    showImage(currentImageIndex);
+                });
+                // 初始
+                showImage(currentImageIndex);
+                </script>
+        </div>
+        <!-- 技術介紹結束 -->
+
+        <!-- 投保流程 START -->
+        <img src="image/process1.png" class="process" id="third">
+        <!-- 投保流程 START -->
+
+        <!-- 保單QA START -->
+        <div class="qa">
+            <div class="collapsible-container">
+                <button class="collapsible active">Q1.選擇UBI2.0車險有什麼好處？</button>
+                <div class="content">
+                    <h3>1.更客製化的保單、人性化保單內容</h3>
+                    <h3>2.區塊鏈儲存個人資料，降低隱私疑慮</h3>
+                    <h3>3.AI大數據運算，讓你擁有更優惠的價格</h3>
+                    <h3>4.行車輔助功能，提醒駕駛注意行為，路途更安心</h3>
+                </div>
+            </div><br>
+            <div class="collapsible-container">
+              <button class="collapsible">Q2.如何註冊網站會員？成為會員有何好處？</button>
+              <div class="content">
+                <h3>A：可由網站右上方進行首次註冊；加入會員可享有以下服務：線上投保、不定期會員專屬優惠服務、暢享保險資訊、參加抽獎福利。</h3>
+              </div>
+            </div><br>
+            <div class="collapsible-container">
+              <button class="collapsible">Q3.「被保人」及「要保人」有何不同？</button>
+              <div class="content">
+                <h3>A：「要保人」指訂定保險契約並繳付保費之人，可指定或更改受益人、變更契約、解約，與被保人可為同一人；「被保人」需為車主本人，即行照上所登記之姓名。</h3>
+              </div>
+            </div><br>
+            <div class="collapsible-container">
+                <button class="collapsible">Q4.如何確認繳費完成？</button>
+                <div class="content">
+                  <h3>A：本網站會發送付款成功的簡訊通知至手機，或至「我的保單」中查看，成功繳費即顯示繳費時間。</h3>
+                </div>
+              </div><br>
+              <div class="collapsible-container">
+                <button class="collapsible">Q5.我中獎了如何收到獎品？大約需要多久時間？</button>
+                <div class="content">
+                  <h3>A：獎品使用宅配方式寄送到會員資料填寫之地址，也可以至本公司領取，宅配需1～2周的時間，麻煩親愛的會員耐心等待。</h3>
+                </div>
+              </div><br><br>
+        </div>
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+                this.classList.remove("active");
+            } else {
+                // 首先关闭所有内容块
+                for (var j = 0; j < coll.length; j++) {
+                coll[j].nextElementSibling.style.maxHeight = null;
+                coll[j].classList.remove("active");
+                }
+                // 然后展开当前点击的内容块
+                content.style.maxHeight = content.scrollHeight + "px";
+                this.classList.add("active");
+            } 
+            });
+        }
+        // 默认展开第一项
+        var defaultCollapsible = document.querySelector(".collapsible.active");
+        var defaultContent = defaultCollapsible.nextElementSibling;
+        defaultContent.style.maxHeight = defaultContent.scrollHeight + "px";
+        </script>
+        <!-- 保單QA END -->
+    </div>
+    <footer>
+        <div class="under">
+            <div class="contact-info" style="float:left;">
+                <div class="box">
+                    <div class="leftbox" style="float:left;">
+                        <h3 class>Contact Us</h3>
+                    </div>
+                    <div class="contact-details" style="float:right;">                    
+                        <div>
+                            <p>0922467899</p>                      
+                            <p> <a href="mailto:email@gmail.com">Ddong@gmail.com</a></p>                      
+                            <p>桃園市中壢區中北路二段13號</p>                   
+                        </div>                  
+                    </div>            
+                </div>        
+            </div>   
+            <div class="download-info" style="float:right;">
+                <div class="box">
+                    <div class="leftbox" style="float:left;">
+                        <h3>相關文件</h3>
+                    </div>
+                    <div class="rightbox" style="float:right;">
+                        <p><a href="#">會員條款.pdf</a></p>
+                        <p><a href="#">PDF連結檔.pdf</a></p>              
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

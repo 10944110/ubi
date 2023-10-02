@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <style>
+        @import url(css/login.css);
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="image/Logo.PNG" class="logo"></div>
+        <div class="slogan"><h2>好險U你</h2></div>
+        <button class="login-button"><a href="">登入</a></button>
+    </header>
+    <div class="back-line">
+        <div class="container">
+          <!-- 按鈕開始-->
+          <div class="fixed-button"><p>線上<br>客服</p></div>
+          <!-- 按鈕結束-->
+          <!-- 內容-->
+          <div class="login-form">
+              <form action="myinsurance.html" method="POST">
+                  <label for="username">帳號/電子郵件</label><br>                
+                  <input type="text" id="username" name="username" required><br><br>              
+                  <label for="password">密碼</label><br>              
+                  <input type="password" id="password" name="password" required><br><br><br>            
+                  <div class="form-links">
+                      <a href="">忘記密碼？</a><br>
+                      <a href="">還没有加入我們？點此預約時段</a><br>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="cancel-button" id="cancel-button">取消</button>
+                        <button type="submit" class="confirm-button">確認</button>
+                    </div>
+                </form>
+            </div>
+            <script>
+                // 获取取消按钮和输入字段
+                const cancelButton = document.getElementById('cancel-button');
+                const usernameInput = document.getElementById('username');
+                const passwordInput = document.getElementById('password');
+                // 添加取消按钮的点击事件监听器
+                cancelButton.addEventListener('click', function() {
+                    // 清空输入字段的值
+                    usernameInput.value = '';
+                    passwordInput.value = '';
+                });
+            </script>
+        </div>
+    </div>
+    <!-- footer開始-->
+    <footer>
+        <div class="under">
+            <div class="contact-info" style="float:left;">
+                <div class="box">
+                    <div class="leftbox" style="float:left;">
+                        <h3 class>Contact Us</h3>
+                    </div>
+                    <div class="contact-details" style="float:right;">                    
+                        <div>
+                            <p>0922467899</p>                      
+                            <p> <a href="mailto:email@gmail.com">Ddong@gmail.com</a></p>                      
+                            <p>桃園市中壢區中北路二段13號</p>                   
+                        </div>                  
+                    </div>            
+                </div>        
+            </div>   
+            <div class="download-info" style="float:right;">
+                <div class="box">
+                    <div class="leftbox" style="float:left;">
+                        <h3>相關文件</h3>
+                    </div>
+                    <div class="rightbox" style="float:right;">
+                        <p><a href="#">會員條款.pdf</a></p>
+                        <p><a href="#">PDF連結檔.pdf</a></p>              
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </footer>
+</body>
+</html>

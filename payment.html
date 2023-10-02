@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>保費計算</title>
+    <style>
+        @import url(css/payment.css);
+    </style>
+</head>
+<body>
+    <header>
+        <div><img src="image/Logo.PNG" class="logo"></div>
+        <div class="slogan">
+            <h2>好險U你</h2>
+        </div>
+        <button class="login-button"><a href="index.html">登出</a></button>
+    </header>
+    <div class="back-line">
+        <div class="container">
+            <!-- 按鈕開始-->
+            <div class="buttontwice">
+                <div class="buttontwice-1"><button class="button button1" id="button button1"
+                        onclick="window.location.href='member.html'"><img src="image/mem1.PNG" class="icon">
+                        <p class="buttonfont">&nbsp;會員資料</p>
+                    </button>
+                </div>
+                <div class="buttontwice-2"><button class="button button2" id="button button2"
+                        onclick="window.location.href='myinsurance.html'"><img src="image/mem2.PNG" class="icon">
+                        <p class="buttonfont">&nbsp;我的保單</p>
+                    </button>
+                </div>
+                <div class="buttontwice-3"><button class="cbutton button3" id="button button3"
+                        onclick="window.location.href='payment.html'"><img src="image/mem3.PNG" class="icon">
+                        <p class="buttonfont">&nbsp;保費計算</p>
+                    </button>
+                </div>
+                <div class="buttontwice-4"><button class="button button4" id="button button4"
+                        onclick="window.location.href='lottery.html'"><img src="image/mem4.PNG" class="icon">
+                        <p class="buttonfont">&nbsp;抽獎專區</p>
+                    </button>
+                </div>
+            </div>
+            <div class="fixed-button">
+                <p>線上<br>客服</p>
+            </div>
+            <!-- 按鈕結束-->
+
+            <div class="big-rec">
+                <!-- 第一排開始-->
+                <div class="col-1">
+                    <div class="col-1-left">
+                        <p class="col-1-left-p1">駕駛人姓名：陳O鉉</p>
+                        <p class="col-1-left-p2">用途：自用</p>
+                    </div>
+                    <div class="col-1-right">
+                        <p>本期累積里程數：230公里</p>
+                        <p>上次保養日期：2023/3/24</p>
+                    </div>
+                </div>
+                <!-- 第一排結束-->
+
+                <!-- 第二排開始-->
+                <div class="col-2">
+                    <div class="col-2-left">
+                        <div class="col-2-left-f1">
+                            <p class="f1">本月總駕駛時數：</p>
+                            <p class="f1-1" >60小時</p>
+                            <p class="f1" >超過八小時行車天數：</p>
+                            <p class="f1-1">3天</p>
+                        </div>
+                    </div>
+                    <div class="col-2-right">
+                        <h3 style="margin-left: 2%;">行車時段<img src="image/q.png" class="info" style="height: 15px;">
+                            <span class="info-popup">
+                                早上：6:00～11:00<br>
+                                中午：11:00～17:00<br>
+                                晚上:17:00～24:00<br>
+                                凌晨:24:00～6:00</span>
+                        </h3>
+                        <div class="col-2-right-f1">
+                            <div class="row">
+                                <div class="column column-text">
+                                    <p class="column-text">早上</p>
+                                </div>
+                                <div class="column column-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress-bar1"></div>
+                                        <span id="progress-percent1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <p class="column-text">中午</p>
+                                </div>
+                                <div class="column">
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress-bar2"></div>
+                                        <span id="progress-percent2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <p class="column-text">晚上</p>
+                                </div>
+                                <div class="column">
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress-bar3"></div>
+                                        <span id="progress-percent3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <p class="column-text">凌晨</p>
+                                </div>
+                                <div class="column">
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress-bar4"></div>
+                                        <span id="progress-percent4"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <script>// 進度條百分比
+                    const progressBar1 = document.getElementById("progress-bar1");
+                    const progressPercent1 = document.getElementById("progress-percent1");
+                    const progressBar2 = document.getElementById("progress-bar2");
+                    const progressPercent2 = document.getElementById("progress-percent2");
+                    const progressBar3 = document.getElementById("progress-bar3");
+                    const progressPercent3 = document.getElementById("progress-percent3");
+                    const progressBar4 = document.getElementById("progress-bar4");
+                    const progressPercent4 = document.getElementById("progress-percent4");
+
+                    // 進度條百分比，從這裡改數值
+                    const initialProgress1 = 33;
+                    const initialProgress2 = 80;
+                    const initialProgress3 = 14;
+                    const initialProgress4 = 20;
+
+                    progressBar1.style.width = initialProgress1 + "%";
+                    progressPercent1.textContent = initialProgress1 + "%";
+                    progressBar2.style.width = initialProgress2 + "%";
+                    progressPercent2.textContent = initialProgress2 + "%";
+                    progressBar3.style.width = initialProgress3 + "%";
+                    progressPercent3.textContent = initialProgress3 + "%";
+                    progressBar4.style.width = initialProgress4 + "%";
+                    progressPercent4.textContent = initialProgress4 + "%";
+                </script>
+                <!-- 第二排結束-->
+
+                <!-- 第三排開始-->
+                <div class="col-3">
+                    <div class="col-3-left">
+                        <div class="col-3-left-1 info-container">
+                            <p style="margin-left: 5%;">環境因素： +0.05%<img src="image/q.png" class="info2"
+                                    style="height: 15px;">
+                                <span class="info2-popup2">包含光照、雨量、特殊天氣</span>
+                            </p>
+                            <p style="margin-right: 15%;">動態因子： +0.05%<img src="image/q.png" class="info3"
+                                    style="height: 15px;">
+                                <span class="info3-popup3">包含駕駛時段、駕駛時長、保養日期</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3-right">
+                        <div class="col-3-right-1">
+                            <p style="text-align: center;align-items: center;">加總：+0.1%</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第三排結束-->
+
+                <!-- 第四排開始-->
+                <div class="col-4">
+                    <div class="col-4-left">
+                        <h3 style="margin-left: 2%;">駕駛行為（違規紀錄）</h3>
+                        <div class="col-4-left-1">
+                            <div class="col-4-left-1-1">
+                            <div style="display: flex; align-items: center;">
+                                <p class="reasons">闖紅燈</p>
+                                <p class="times" >15次</p>
+                            </div>
+                            <hr style="border-top: 1px solid #000; margin: 10px 0;">
+                            <div class="scroll-container">
+                            <div style="max-height: 150px; overflow-y: auto;">
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll" >
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div></div></div>
+                            </div>
+                        </div>
+                        <div class="col-4-left-2">
+                            <div class="col-4-left-1-1">
+                            <div style="display: flex; align-items: center;">
+                                <p class="reasons">超速</p>
+                                <p class="times" >15次</p>
+                            </div>
+                            <hr style="border-top: 1px solid #000; margin: 10px 0;">
+                            <div class="scroll-container">
+                            <div style="max-height: 150px; overflow-y: auto;">
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll" >
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div></div></div></div>
+                        </div>
+                        <div class="col-4-left-3">
+                            <div class="col-4-left-1-1">
+                            <div style="display: flex; align-items: center;">
+                                <p class="reasons">急煞車</p>
+                                <p class="times" >15次</p>
+                            </div>
+                            <hr style="border-top: 1px solid #000; margin: 10px 0;">
+                            <div class="scroll-container">
+                            <div style="max-height: 150px; overflow-y: auto;">
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll" >
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div>
+                                <div class="scroll">
+                                    <p class="date">1/4</p>
+                                    <p class="time">24:00</p>
+                                    <p class="place">台北市</p>
+                                </div></div></div></div>
+                        </div>
+                    </div>
+                    <div class="col-4-right">
+                    <div class="col-4-right-1">
+                        <h3 style="margin-left: 2%;">金額計算</h3>
+                        <div class="col-4-right-1-1">
+                            <div class="left-column" >
+                                <p>原總價：</p>
+                                <p>原折扣：</p>
+                                <p>總折扣：</p>
+                            </div>
+                            <div class="right-column">
+                                <p>30,000  TWD</p>
+                                <p>10%</p>
+                                <p>7.5%</p>
+                            </div>
+                        </div>
+                        <div class="col-4-right-1-2">
+                            <div class="col-4-right-r2">
+                                <p class="r2" >實收金額：</p>
+                                <p class="r2-2" >27,750 NTD</p>
+                                <p class="r2">扣款帳戶：</p>
+                                <p class="r2-2" >005（台灣銀行）123XXXXXXXXX78345</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4-right-2">
+                        <div class="col-4-right-2-1">
+                            <p style="margin: 5px;">駕駛評等：<img src="image/q.png" class="info4"
+                                style="height: 15px;">
+                            <span class="info4-popup4">
+                                第一級：-0.5%<br>
+                                第二級：-1.7%<br>
+                                第三級：-2.4%<br>
+                                第四級：-3.9%<br>
+                                第五級：-5%</span></p>
+                            <p style="text-align: center;font-size: 18px;">第 3 級  優良駕駛</p>
+                        </div>
+                        <div class="col-4-right-2-2">
+                            <p style="margin: 5px;">本期可抽：</p>
+                            <p style="text-align: center;font-size: 18px;">10  次</p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <!-- 第四排結束-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
