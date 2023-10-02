@@ -1,0 +1,631 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS";
+}
+
+/* RWD */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .logo {
+      margin: 10px 0;
+  }
+
+  .slogan {
+      margin: 10px 0;
+  }
+
+  .progress {
+      width: 80%;
+      /* Adjust the width as needed for smaller screens */
+  }
+}
+
+/*header開始*/
+header {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1);
+
+}
+
+.logo {
+  height: auto;
+  /* RED高度 */
+  width: 80px;
+  /* 固定width */
+  margin-left: 20px;
+}
+
+.slogan {
+  font-size: 24px;
+}
+
+.login-button {
+  background-color: rgb(201, 204, 206);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/*header結束*/
+/*背景斜線、縮開始*/
+.back-line {
+  background: repeating-linear-gradient(-45deg, transparent, transparent 17px, rgba(245, 235, 255) 10px, rgba(245, 235, 255) 20px);
+  height: 168vh;
+  /*長度*/
+  margin-top: -30px;
+  z-index: -10000000000;
+}
+
+.container {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/*背景斜線、縮結束*/
+
+/* 按鈕開始 */
+.buttontwice {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+p.buttonfont {
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.buttontwice-1,
+.buttontwice-2,
+.buttontwice-3,
+.buttontwice-4 {
+  text-align: center;
+  width: 25%;
+  margin: 0 10px;
+  flex: 1;
+  max-width: 200px;
+}
+
+.button1,
+.button2,
+.button3,
+.button4 {
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin: 0 auto;
+  /* 鈕中間 */
+}
+
+.button1 {
+  background-color: #F89B82;
+}
+
+.button2 {
+  background-color: #FFD875;
+}
+
+.button3 {
+  background-color: rgb(227, 239, 255);
+}
+
+.button4 {
+  background-color: rgb(172, 212, 189);
+}
+
+.button1:hover {
+  background-color: #fc592c;
+  opacity: 0.8;
+}
+
+.button2:hover {
+  background-color: #fac130;
+  opacity: 0.8;
+}
+
+.button3:hover {
+  background-color: rgb(174, 208, 253);
+  opacity: 0.8;
+}
+
+.button4:hover {
+  background-color: rgb(136, 212, 169);
+  opacity: 0.8;
+}
+
+.button1:active {
+  background-color: #fc592c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button2:active {
+  background-color: #fac130;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button3:active {
+  background-color: rgb(174, 208, 253);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button4:active {
+  background-color: rgb(136, 212, 169);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+img.icon {
+  height: 35px;
+  margin-top: 3px;
+}
+
+
+/* 固定鈕 */
+.fixed-button {
+  position: fixed;
+  right: 180px;
+  bottom: 20px;
+  background-color: rgb(231, 191, 156);
+  color: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 垂直居中 */
+}
+
+.fixed-button:hover {
+  background-color: rgb(235, 166, 107);
+  opacity: 0.8;
+}
+
+.fixed-button:active {
+  background-color: rgb(235, 166, 107);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* 按鈕結束*/
+/*大框開始*/
+.big-rec {
+  background-color: rgb(246, 212, 182);
+  padding: 20px;
+  margin-top: 20px;
+  height: 980px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*大框結束*/
+/*第一排開始*/
+.col-1 {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  height: 70px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.col-1-left {
+  background-color: rgb(248, 244, 238);
+  height: 60px;
+  flex: 1;
+  margin: 5px;
+  max-width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.col-1-right {
+  background-color: rgb(248, 244, 238);
+  height: 60px;
+  flex: 1;
+  margin: 5px;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.col-1-left-p1 {
+  text-align: left;
+  flex: 1;
+  margin-left: 5%;
+}
+
+.col-1-left-p2 {
+  text-align: right;
+  flex: 1;
+  margin-right: 5%;
+}
+
+/*第一排結束*/
+/*第二排開始*/
+.col-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.col-2-left {
+  background-color: #fff;
+  flex: 1;
+  padding: 10px;
+  max-width: 42%;
+  height: 183px;
+}
+
+.col-2-right {
+  background-color: #fff;
+  flex: 1;
+  padding: 10px;
+  max-width: 51%;
+  height: 183px;
+  position: relative;
+}
+
+.col-2-left-f1 {
+  background-color: rgb(248, 244, 238);
+  height: 172px;
+  margin: 5px;
+  max-width: 100%;
+  align-items: center;
+}
+
+.col-2-right-f1 {
+  background-color: rgb(248, 244, 238);
+  height: 145px;
+  margin: 5px;
+  max-width: 100%;
+  align-items: center;
+}
+
+.col-2-right-f1::after {
+  content: '';
+  position: absolute;
+  top: 24%;
+  right: 80%;
+  width: 2px;
+  height: 65%;
+  background-color: rgba(0, 0, 0);
+}
+p.f1{margin-left: 5%;padding: 3%;}
+p.f1-1{text-align: center;font-size: 20px;padding: 2.8%;}
+/* 整個行 */
+.row {
+  max-width: 378px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 13px;
+  align-items: center;
+  padding-top: 3px;
+}
+
+/* 每一列 */
+.column {
+  flex: 1;
+  text-align: center;
+
+}
+
+/* 進度條容器 */
+.progress-bar {
+  background-color: rgb(246, 212, 182);
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  align-items: center;
+  margin-left: -50%;
+  max-width: 200%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(231, 167, 111);
+}
+
+/* 修改 .progress 進度條寬度 */
+.progress {
+  height: 100%;
+  background-color: rgb(198, 139, 87);
+  transition: width 0.5s;
+
+}
+
+p.column-text {
+  text-align: left;
+  padding-left: 15px;
+}
+
+/* 顯示視窗的樣式 */
+.info-popup {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 3px solid rgb(118, 57, 3);
+  padding: 10px;
+  z-index: 999;
+  right: 155px;
+  top: -22px;
+  border-radius: 30px;
+  font-size: 10px;
+}
+
+/* 顯示視窗的樣式（滑鼠懸浮時） */
+.info:hover+.info-popup {
+  display: block;
+}
+
+/*第二排結束*/
+
+/*第三排開始*/
+.col-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.col-3-left {
+  background-color: #fff;
+  flex: 1;
+  padding: 10px;
+  max-width: 68%;
+  height: 70px;
+}
+
+.col-3-right {
+  background-color: #fff;
+  flex: 1;
+  padding: 10px;
+  max-width: 25%;
+  height: 70px;
+}
+
+.col-3-left-1 {
+  background-color: rgb(248, 244, 238);
+  height: 60px;
+  margin: 5px;
+  max-width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-3-right-1 {
+  background-color: rgb(248, 244, 238);
+  height: 60px;
+  margin: 5px;
+  max-width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.info2-popup2 {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 3px solid rgb(118, 57, 3);
+  padding: 10px;
+  z-index: 999;
+  right: 870px;
+  top: 640px;
+  border-radius: 30px;
+  font-size: 10px;
+}
+
+/* 顯示視窗的樣式（滑鼠懸浮時） */
+.info2:hover+.info2-popup2 {
+  display: block;
+}
+
+.info3-popup3 {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 3px solid rgb(118, 57, 3);
+  padding: 10px;
+  z-index: 999;
+  right: 600px;
+  top: 640px;
+  border-radius: 30px;
+  font-size: 10px;
+}
+
+/* 顯示視窗的樣式（滑鼠懸浮時） */
+.info3:hover+.info3-popup3 {
+  display: block;
+}
+/*第三排結束*/
+
+/*第四排開始*/
+.col-4 {
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+
+.col-4-left {
+background-color: #fff;
+flex: 1;
+padding: 10px;
+max-width: 42%; 
+height: 510px;
+flex-direction: column;
+justify-content: space-between;
+}
+.col-4-right {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+flex: 1;
+max-width: 53.5%; 
+}
+.col-4-right-1 {
+background-color: #fff; 
+height: 390px;
+padding: 10px; 
+margin-bottom: 10px;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.col-4-right-2 {
+background-color: #fff; 
+height: 85px;
+padding: 10px; 
+}
+.col-4-left-1,
+.col-4-left-2,
+.col-4-left-3{
+background-color: rgb(248, 244, 238);
+color: rgb(0, 0, 0); 
+height: 152px;
+margin-bottom: 10px; 
+margin-top: 7px;
+margin-left: 2%;
+margin-right: 2%;
+}
+.col-4-right-1-1{
+background-color: rgb(248, 244, 238);
+color: rgb(0, 0, 0); 
+height: 150px;
+margin-bottom: 10px; 
+margin-top: 7px;
+margin-left: 2%;
+margin-right: 2%;
+}
+
+.col-4-right-1-2{
+background-color: rgb(248, 244, 238);
+color: rgb(0, 0, 0); 
+height: 191px;
+margin-bottom: 10px; 
+margin-top: 7px;
+margin-left: 2%;
+margin-right: 2%;
+}
+.scroll-container {
+max-height: 75px; 
+overflow-y: scroll; 
+overflow-x: hidden; 
+}
+.col-4-left-1-1{
+padding: 15px;
+}
+.scroll{
+display: flex;
+justify-content: space-between;
+margin-bottom: 4px;
+margin-left: 8%;
+margin-right: 8%;
+}
+p.date{flex: 1;}
+p.time{flex: 1; text-align: center;}
+p.place{flex: 1; text-align: right;}
+p.times{flex: 1; text-align: right; margin-right: 5%;}
+p.reasons{flex: 1; margin-left: 5%;}
+
+.left-column {
+float: left;
+width: 50%; 
+text-align: center;
+margin-top: 5.5%;
+}
+
+.left-column p {
+margin: 10px;}
+
+.right-column {
+float: left;
+width: 50%; 
+text-align: center;
+margin-top: 5.5%;
+}
+
+.right-column p {
+margin: 10px; }
+
+.col-4-right-r2 {
+  background-color: rgb(248, 244, 238);
+  margin: 5px;
+  align-items: center;
+  font-size: 18px;
+}
+p.r2{padding: 3%;}
+p.r2-2{text-align: center;padding:2%;}
+.col-4-right-2{
+display: flex;
+}
+.col-4-right-2-1{
+background-color: rgb(248, 244, 238); 
+height: 60px;
+margin: 5px;
+width: 45%;
+padding:10px;
+}
+.col-4-right-2-2{
+background-color: rgb(248, 244, 238); 
+height: 60px;
+  margin: 5px;
+  width: 45%;
+padding:10px;
+}
+.info4-popup4 {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 3px solid rgb(118, 57, 3);
+  padding: 10px;
+  z-index: 999;
+  right: 550px;
+  top: 1100px;
+  border-radius: 30px;
+  font-size: 10px;
+}
+
+/* 顯示視窗的樣式（滑鼠懸浮時） */
+.info4:hover+.info4-popup4 {
+  display: block;
+}
+/*第四排結束*/

@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS";
+}
+/* RWD */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .slogan {
+        margin: 10px 0;
+    }
+}
+/*header開始*/
+header {
+    background-color: rgb(85, 111, 168);
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.logo {
+    height: auto; /* RED高度 */
+    width: 80px; /* 固定width */
+    margin-left: 20px;
+}
+
+.slogan {
+    font-size: 24px;
+}
+
+.login-button {
+    background-color: rgb(85, 111, 168);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+.login-button a {
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+}
+/*header結束*/
+
+/* 固定鈕 */
+.fixed-button {
+position: fixed;
+right: 180px;
+bottom: 20px; 
+background-color: rgb(231, 191, 156);
+color: rgb(0, 0, 0);
+width: 100px;
+height: 100px;
+border-radius: 50%;
+text-align: center;
+line-height: 30px;
+font-size: 20px;
+cursor: pointer;
+box-shadow: 0 5px #999;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; /* 垂直居中 */
+}
+.fixed-button:hover {background-color: rgb(235, 166, 107);opacity: 0.8;}
+.fixed-button:active{background-color: rgb(235, 166, 107);box-shadow: 0 5px #666;transform: translateY(4px);}
+/* 按鈕結束*/
+
+/* footer開始*/
+footer {
+    background-color: rgb(255, 248, 232);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 140px;
+    border-top-width:2px;
+    border-top-style:solid;
+    border-top-color:black;
+}
+
+.contact-info{
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 200px;
+    padding: 15px 20px 15px 20px;
+}
+.download-info {
+    flex: 1;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 200px;
+    padding: 15px 20px 15px 20px;
+    margin-top: 15px;
+}
+
+.contact-details{
+    text-align: left;
+    line-height: 30px;
+}
+
+.leftbox{
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.rightbox{
+    text-align: left;
+    line-height: 30px;
+}
+/* footer結束*/
+
+/* 會員登入開始*/
+.container{
+    margin: 10% 37% 10% 37%;
+    background-color: rgb(255, 248, 232);
+    color: rgb(134, 66, 7);
+    padding: 30px 40px 30px 40px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+label{
+    font-weight: bold;
+    font-size: 18px;
+}
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* 移除输入框的边框样式，添加底边框 */
+input[type="text"],
+input[type="password"] {
+    border: none;
+    background-color: rgb(255, 248, 232);
+    border-bottom: 1px solid rgb(134, 66, 7); /* 底边框的样式和颜色 */
+    padding: 5px; /* 可选：添加一些填充以改善外观 */
+    width: 100%; /* 使输入框填满容器的宽度 */
+    margin: 10px 0; /* 可选：添加一些上下外边距 */
+    outline: none; /* 可选：去除输入框的默认外观 */
+}
+
+/* 样式化链接 */
+.form-links {
+    text-align: center; /* 将链接置中 */
+    
+}
+
+.form-links a {
+    text-decoration: underline; /* 添加下划线效果 */
+    color: rgb(134, 66, 7); /* 更改链接颜色为指定的颜色 */
+    margin: 0 10px; /* 可选：添加一些外边距来调整位置 */
+}
+
+/* 取消、確認按鈕 */
+.form-buttons {
+    text-align: center; /* 将按钮置中 */
+    margin-top: 35px;/* 添加一些外边距来调整按钮的位置 */
+}
+
+/* 取消按钮 */
+.cancel-button,
+.confirm-button {
+    background-color: rgb(231, 191, 156); /* 取消按钮的背景颜色 */
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cancel-button{
+    margin-right: 85px; /* 右外边距，将按钮推向左侧 */
+}
+
+.confirm-button{
+    margin-left: 85px; /* 左外边距，将按钮推向右侧 */
+}
+/* 會員登入結束*/
+
+
+

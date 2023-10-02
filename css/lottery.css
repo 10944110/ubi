@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS";
+}
+/* RWD */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .slogan {
+        margin: 10px 0;
+    }
+
+    .container{
+        margin-left: 20%;
+        margin-right: 20%;
+    
+      }
+      .content1,.content2,.content3,.content4{
+        position: absolute;
+      }
+}
+/*header開始*/
+header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.1); 
+    
+}
+.logo {
+    height: auto; /* RED高度 */
+    width: 80px; /* 固定width */
+    margin-left: 20px;
+}
+
+.slogan {
+    font-size: 24px;
+}
+
+.login-button {
+    background-color: rgb(201, 204, 206);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-button a {
+    text-decoration: none; 
+    color: rgb(0, 0, 0);
+}
+/*header結束*/
+/*背景斜線、縮開始*/
+.back-line {
+    background: repeating-linear-gradient(-45deg, transparent, transparent 17px, rgba(245, 235, 255) 10px, rgba(245, 235, 255) 20px);
+    height: 150vh;/*長度*/
+    margin-top: -30px; 
+    z-index: -10000000000;
+}
+.container{
+margin-left: 20%;
+margin-right: 20%;
+}
+/*背景斜線、縮結束*/
+
+/* 按鈕開始 */
+.buttontwice {
+display: flex;
+justify-content: center;
+flex-wrap: wrap; 
+padding: 20px; 
+margin-top: 40px;
+}
+p.buttonfont{
+font-size: 25px;
+letter-spacing: 3px;
+text-align: center;
+text-decoration: none;
+}
+.buttontwice-1,
+.buttontwice-2,
+.buttontwice-3,
+.buttontwice-4 {
+text-align: center;
+width: 25%; 
+margin: 0 10px; 
+flex: 1;
+max-width: 200px; 
+}
+
+.button1,
+.button2,
+.button3,
+.button4{
+display: flex; 
+align-items: center;
+padding: 7px 15px;
+cursor: pointer;
+outline: none;
+color: rgb(0, 0, 0);
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+margin: 0 auto; /* 鈕中間 */
+}
+.button1{background-color: #F89B82;}
+.button2{background-color: #FFD875;}
+.button3{background-color: rgb(227, 239, 255);}
+.button4{background-color: rgb(172, 212, 189);}
+
+.button1:hover{background-color: #fc592c;opacity: 0.8;}
+.button2:hover{background-color: #fac130;opacity: 0.8;}
+.button3:hover{background-color: rgb(174, 208, 253);opacity: 0.8;}
+.button4:hover {background-color: rgb(136, 212, 169);opacity: 0.8;}
+
+.button1:active{background-color: #fc592c;box-shadow: 0 5px #666;transform: translateY(4px);}
+.button2:active{background-color: #fac130;box-shadow: 0 5px #666;transform: translateY(4px);}
+.button3:active{background-color: rgb(174, 208, 253);box-shadow: 0 5px #666;transform: translateY(4px);}
+.button4:active {background-color: rgb(136, 212, 169);box-shadow: 0 5px #666;transform: translateY(4px);}
+img.icon{height: 35px;margin-top: 3px;}
+
+
+/* 固定鈕 */
+.fixed-button {
+position: fixed;
+right: 180px;
+bottom: 20px; 
+background-color: rgb(231, 191, 156);
+color: rgb(0, 0, 0);
+width: 100px;
+height: 100px;
+border-radius: 50%;
+text-align: center;
+line-height: 30px;
+font-size: 20px;
+cursor: pointer;
+box-shadow: 0 5px #999;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; /* 垂直居中 */
+}
+.fixed-button:hover {background-color: rgb(235, 166, 107);opacity: 0.8;}
+.fixed-button:active{background-color: rgb(235, 166, 107);box-shadow: 0 5px #666;transform: translateY(4px);}
+/* 按鈕結束*/
+
+/* 抽獎內容開始*/
+.content1,
+.content3 {
+    background-color: rgb(255, 248, 232);
+    border-radius: 35px;
+    width: 45%;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 28px;
+}
+
+.content2,
+.content4 {
+    background-color: rgb(255, 248, 232);
+    border-radius: 35px;
+    width: 45%;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-right: 28px;
+}
+
+.content1,
+.content2 {
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.content3,
+.content4 {
+    margin-top: 22px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    background-color: rgb(140, 197, 215);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.name {
+    background-color: rgb(85, 111, 168);
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    padding: 2px 0px 2px 0px;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 3px solid black;
+}
+
+.photo {
+    height: 100px;
+    text-align: center;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+
+.text1 {
+    font-size: 24px;
+    padding-left: 60px;
+    padding-top: 45px;
+}
+
+.word {
+    padding-top: 22px;
+    padding-right: 35px;
+    line-height: 56px;
+}
+
+.text2,
+.text4 {
+    font-size: 22px;
+    
+}
+
+.text3 {
+    font-size: 40px;
+}
+/* 抽獎內容結束*/
+
+/* 抽獎按鈕*/
+.go {
+    background-color: rgb(248, 157, 131);
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 5px 50px 5px 50px;
+    margin-left: 25px;
+    border-radius: 20px;
+}
+
+/* 查看上期開獎名單按鈕*/
+.under1 {
+    background-color: rgb(173, 203, 192);
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 5px 50px 5px 50px;
+    margin-left: 28px;
+    border-radius: 20px;
+    
+}
+
+/* 抽獎規則查詢按鈕*/
+.under2 {
+    text-align: right;
+    background-color: rgb(237, 220, 177);
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 5px 50px 5px 50px;
+    margin-right: 28px;
+    border-radius: 20px;
+    
+}
+
+.under1,
+.under2 {
+    margin-bottom: 50px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 248, 232);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.popup1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 248, 232);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.popup2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 248, 232);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 400px;
+    text-align: center;
+    border-radius: 35px;
+}
+
+.rectangle {
+    border-radius: 35px;
+    width: 345px;
+    height: 74px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+/* 關閉按鈕 */
+.close-button {
+    position: absolute;
+    bottom: 10px;
+    left: 45px;
+    background-color: rgb(180, 214, 237);
+    border-radius: 100px;
+    padding: 5px 10px;
+    cursor: pointer;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: none; 
+}
+
+.close-button1 {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background-color: rgb(248, 157, 131);
+    border-radius: 100px;
+    padding: 5px 10px;
+    cursor: pointer;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: none; 
+}
+
+.solidline {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.many {
+    display: flex;
+    justify-content: space-between;
+}
+
+button.previousround {
+    background-color: #f1f1f1;
+    font-size: 20px;
+    color: black;
+    border-radius: 50%;
+    margin-left: 25%;
+}
+
+button.nextround {
+    background-color: #f1f1f1;
+    font-size: 20px;
+    color: black;
+    border-radius: 50%;
+    margin-right: 25%;
+}
+
+.count-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+p.rec{
+    padding-top: 9px;
+}
+h2.rec2{
+    padding-bottom: 9px; 
+}
+.popup button.previousround, /* 彈視窗 */
+.popup button.nextround {
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px; 
+    font-size: 20px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 透明的灰色背景 */
+    z-index: 999; /* 確保遮罩層在最上層 */
+    display: none; /* 最初隱藏 */
+}
